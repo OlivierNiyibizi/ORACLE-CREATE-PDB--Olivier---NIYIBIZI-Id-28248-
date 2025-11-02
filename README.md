@@ -76,6 +76,8 @@ HERE THIS IS THE IMAGE BEFORE LOGIN
 <img width="1021" height="1020" alt="image" src="https://github.com/user-attachments/assets/efa50306-a379-4621-96a4-a2d8150d6b78" />
 FINALY AFTER LOGIN INTO ORACLE ENTERPRISE MANAGER DATABASE 
 EXPRESS 
+<img width="996" height="454" alt="image" src="https://github.com/user-attachments/assets/2291b936-68e6-462a-8a76-aa28dcc2009a" />
+
 
 6.	Error Handling and Troubleshooting 
 So some common errors that was faced during the extraction of our task and the methods that was used to handle them.   
