@@ -37,3 +37,14 @@ Explanation:
 •	SAVE STATE – ensures it reopens automatically on database restart. 
 Result: 
 The PDB was created successfully and appeared under SHOW PDBS as READ WRITE. 
+<img width="916" height="240" alt="image" src="https://github.com/user-attachments/assets/2d3e6749-74d9-4a15-a82a-43823e5a93ce" />
+4.	Task 2 – Creating and Deleting a Second PDB 
+Objective: 
+Create another pluggable database named NI_to_delete_pdb_28248 and then delete it to demonstrate full database lifecycle management. 
+SQL Script (Creation): 
+CREATE PLUGGABLE DATABASE Ni_to_delete_pdb_28248 
+  ADMIN USER Niyibizi_plsqlauca_2828248 IDENTIFIED BY . 
+  ROLES = (DBA) 
+  CREATE_FILE_DEST = 'C:\ORACLE21C\ORADATA\ORCL\Ni_TO_DELETE_PDB_28248'; Open and Verify: 
+ALTER PLUGGABLE DATABASE NI_to_delete_pdb_28248 OPEN READ WRITE; SHOW PDBS; 
+This screenshot showing ol_to_delete_pdb_28248 in READ WRITE mode. 
