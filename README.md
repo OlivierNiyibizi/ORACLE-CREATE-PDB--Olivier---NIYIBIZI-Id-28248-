@@ -48,3 +48,14 @@ CREATE PLUGGABLE DATABASE Ni_to_delete_pdb_28248
   CREATE_FILE_DEST = 'C:\ORACLE21C\ORADATA\ORCL\Ni_TO_DELETE_PDB_28248'; Open and Verify: 
 ALTER PLUGGABLE DATABASE NI_to_delete_pdb_28248 OPEN READ WRITE; SHOW PDBS; 
 This screenshot showing ol_to_delete_pdb_28248 in READ WRITE mode. 
+<img width="858" height="355" alt="image" src="https://github.com/user-attachments/assets/e9f68160-2d94-45d9-a0e5-221ce98a6ff5" />
+SQL Script (Deletion): 
+ALTER PLUGGABLE DATABASE NI_to_delete_pdb_28248 CLOSE IMMEDIATE; 
+DROP PLUGGABLE DATABASE NI_to_delete_pdb_28248 INCLUDING DATAFILES; SHOW PDBS; 
+Explanation: 
+•	The PDB must be closed before deletion. 
+•	INCLUDING DATAFILES ensures that all associated files are removed from disk. 
+•	SHOW PDBS confirms removal from the container database. 
+Output after executing DROP command showing the PDB is no longer listed 
+
+
