@@ -1,4 +1,4 @@
-# ORACLE-CREATE-PDB--Olivier---NIYIBIZI-Id-28248-
+**ORACLE-CREATE-PDB--Olivier---NIYIBIZI-Id-28248-**
 Student Name: Olivier NIYIBIZI 
 Student ID: 28248 
 Course: PL/SQL and Database Administration 
@@ -76,6 +76,77 @@ HERE THIS IS THE IMAGE BEFORE LOGIN
 <img width="1021" height="1020" alt="image" src="https://github.com/user-attachments/assets/efa50306-a379-4621-96a4-a2d8150d6b78" />
 FINALY AFTER LOGIN INTO ORACLE ENTERPRISE MANAGER DATABASE 
 EXPRESS 
+
+6.	Error Handling and Troubleshooting 
+So some common errors that was faced during the extraction of our task and the methods that was used to handle them.   
+Error Code 	Description 	Solution Applied 
+ORA-
+65005 	Invalid or missing file path in 
+FILE_NAME_CONVERT 	Replaced with CREATE_FILE_DEST for simplicity. 
+ORA-
+65011 	PDB does not exist 	Verified creation success before attempting ALTER. 
+ORA-
+00933 	SQL command not properly ended 	Executed one statement at a time; avoided chaining with semicolons. 
+ORA-
+12541 	Listener not running 	Started Oracle Listener service via services.msc. 
+ORA-
+65019 	PDB already open 	Checked current PDB state with SHOW PDBS before running ALTER. 
+  
+7.	Understanding PDB States 
+	State 	Description 	Purpose 
+The PDB is recognized by Oracle 
+MOUNTED 	Used during startup or maintenance. 
+but not yet opened. 
+READ 	The PDB is open for reading data Used for reports or seed databases (like 
+ONLY 	only. 	PDB$SEED). 
+	State 	Description 	Purpose 
+READ 	The PDB is fully open and 	Allows all SQL operations (SELECT, 
+WRITE 	editable. 	INSERT, UPDATE, DELETE). 
+Example Commands: 
+ALTER PLUGGABLE DATABASE pdb_ Niyibizi28248 OPEN READ WRITE; 
+ALTER PLUGGABLE DATABASE pdb_ Niyibizi28248 OPEN READ ONLY; 
+ALTER PLUGGABLE DATABASE pdb_ Niyibizi28248 CLOSE IMMEDIATE; 
+  
+8.	Role of the ALTER Command 
+ALTER is used to modify the state or structure of existing database objects. 
+•	In this assignment, it was used to open, close, and save the state of PDBs: 
+•	ALTER PLUGGABLE DATABASE pdb_Niyibizi28248 OPEN READ WRITE; 
+•	ALTER PLUGGABLE DATABASE pdb_ Niyibizi28248 SAVE STATE; 
+•	ALTER PLUGGABLE DATABASE NI_to_delete_pdb_28248 CLOSE IMMEDIATE; 
+•	It changes behaviour, not structure — unlike CREATE (to make new) or DROP (to remove). 
+  
+9.	Conclusion 
+This exercise provided hands-on experience with Oracle Multitenant Architecture, demonstrating: 
+•	The process of creating, opening, saving, and deleting PDBs. 
+•	The use of ALTER for managing database states. 
+•	Troubleshooting common Oracle errors effectively. 
+•	Confirming results using Oracle Enterprise Manager (OEM). 
+Through this practical, I gained confidence in using Oracle SQL commands and better understanding the relationship between the CDB (Container Database) and PDBs (Pluggable Databases). 
+  so here is the source for the used data 
+   References 
+1.	Oracle® Database 21c: Multitenant Administrator’s Guide Oracle Corporation, 2023. 
+Available at: https://docs.oracle.com/en/database/oracle/oracledatabase/21/multi/index.html 
+2.	Oracle® Database SQL Language Reference 21c Oracle Corporation, 2023. 
+Documentation for CREATE PLUGGABLE DATABASE, ALTER PLUGGABLE DATABASE, and DROP PLUGGABLE DATABASE commands. 
+https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/index.html 
+3.	Oracle Learning Library (OLL) – Tutorials on Oracle Multitenant Architecture. 
+https://apexapps.oracle.com/pls/apex/f?p=44785:141:0 
+4.	Oracle LiveSQL – Interactive SQL practice environment. 
+https://livesql.oracle.com 
+5.	Stack Overflow Community Discussions – Troubleshooting ORA-65005, ORA-65011, and ORA-12541 errors. 
+https://stackoverflow.com/questions/tagged/oracle 
+6.	YouTube – Oracle DBA Channel 
+“Creating and Managing Pluggable Databases in Oracle 21c.” Available at: 
+https://www.youtube.com/results?search_query=oracle+21c+create+pluggable+database 
+7.	Oracle Enterprise Manager Express User’s Guide Oracle Documentation for managing PDBs via OEM. https://docs.oracle.com/en/database/oracle/oracle-database/21/emxug/index.html 
+  
+Citation Format: 
+Use APA or IEEE referencing depending on your instructor’s preference. The above list follows a simple academic format suitable for GitHub or report documentation. 
+ 
+  
+Prepared by: 
+Olivier (Student ID: 28248) 
+Oracle Database 21c – PL/SQL Practical 
 
 
 
