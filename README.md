@@ -57,5 +57,25 @@ Explanation:
 •	INCLUDING DATAFILES ensures that all associated files are removed from disk. 
 •	SHOW PDBS confirms removal from the container database. 
 Output after executing DROP command showing the PDB is no longer listed 
+<img width="425" height="175" alt="image" src="https://github.com/user-attachments/assets/ae768d4d-7c9f-4b13-8814-ea09d62be729" />
+<img width="965" height="111" alt="image" src="https://github.com/user-attachments/assets/395ef7f3-94ad-40c1-ac9a-8db39ebfad92" />
+5.	Task 3 – Managing PDBs via Oracle Enterprise Manager (OEM) 
+Objective: 
+Verify the existence and status of PDBs using the graphical interface of Oracle Enterprise Manager. 
+Procedure: 
+1.	Accessed OEM at: 
+2.	https://localhost:5500/em 
+3.	Logged in using the SYS user in Container Database (CDB) mode. 
+4.	Navigated to: 
+Container Database → Pluggable Databases 
+➢ Verified: pdb_ Niyibizi28248 appears as OPEN (READ WRITE). 
+o	NI_to_delete_pdb_28248 no longer exists after deletion. 
+o	OEM interface showing the active PDBs list. 
+     
+HERE THIS IS THE IMAGE BEFORE LOGIN 
+<img width="1021" height="1020" alt="image" src="https://github.com/user-attachments/assets/efa50306-a379-4621-96a4-a2d8150d6b78" />
+FINALY AFTER LOGIN INTO ORACLE ENTERPRISE MANAGER DATABASE 
+EXPRESS 
+
 
 
